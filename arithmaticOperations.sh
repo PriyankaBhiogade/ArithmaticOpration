@@ -4,14 +4,15 @@ read -p "Enter First Value: " x
 read -p "Enter Second Value: " y
 read -p "Enter Third Value: " z
 	
+	
 	function additionOfTwoNum(){
 		sum=$(( $1 + $2 ))
-		sumMulofThreeNum="$( multiplictionFunction $(($sum)))"
-		echo $sumMulofThreeNum
+		echo $sum
 	}
 	function multiplictionFunction(){
-		mul=$(( $1 * $z ))
-		echo $mul
+		mul=$(( $1 * $2 ))
+	 sumMulofThreeNum="$( additionOfTwoNum $(($mul)) $(($x)))"
+		echo $sumMulofThreeNum
 	}
-finalResult="$( additionOfTwoNum $(($x)) $(($y)) )"
+finalResult="$( multiplictionFunction $(($y)) $(($z)))"
 	echo "( x + y * z ):: " $finalResult
