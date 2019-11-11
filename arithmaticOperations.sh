@@ -9,10 +9,10 @@ read -p "Enter Third Value: " z
 		sum=$(( $1 + $2 ))
 		echo $sum
 	}
-	function divisionFunction(){
-		div=$(( $1 / $2 ))
-	 sumdivofThreeNum="$( additionOfTwoNum $(($div)) $(($z)))"
-		echo $sumdivofThreeNum
+	function modFunction(){
+		mod=$(( $1 % $2 ))
+	 summodOfThreeNum="$( additionOfTwoNum $(($mod)) $(($z)))"
+		echo $summodOfThreeNum
 	}
-finalResult="$( divisionFunction $(($x)) $(($y)))"
-	echo "( x / y + z ):: " $finalResult
+finalResult="$( modFunction $(($x)) $(($y)))"
+	echo "( x % y + z ):: " $finalResult
