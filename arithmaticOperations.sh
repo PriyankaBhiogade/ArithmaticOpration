@@ -35,4 +35,9 @@ calculator["adddiv"]="$(additionOfTwoNum $(($x)) $(($divResult)))"
 calculator["addmod"]="$(additionOfTwoNum $(($x)) $(($divResult)))"
 
 echo  ${calculator[@]}
-
+		counter=0
+		for i in "${calculator[@]}";
+	 	do 
+			calculatorArray[((counter++))]=$i
+		done
+	         echo "array element from dictionary ::" ${calculatorArray[@]}
