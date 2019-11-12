@@ -1,0 +1,12 @@
+#!/bin/bash -x
+
+read -p "Enter First Value: " x
+read -p "Enter Second Value: " y
+read -p "Enter Second Value: " z
+	
+	function addMulFunction(){
+		sum=$(( $1 + $2 ))
+		echo $sum
+	}
+sumofTwoNum="$( additionOfTwoNum $(($x)) $(($y)) )"
+	echo "Sum of two number :: " $sumofTwoNum
